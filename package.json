@@ -19,11 +19,10 @@
     "bower-config": "~0.6.1",
     "graceful-fs": "~2.0.0",
     "lru-cache": "~2.3.0",
-    "mkdirp": "~0.3.5",
     "request": "~2.51.0",
     "request-replay": "~0.2.0",
     "rimraf": "~2.2.0",
-    "should-proxy": "1.0.4"
+    "mkdirp": "~0.3.5"
   },
   "devDependencies": {
     "expect.js": "~0.2.0",
