@@ -12,18 +12,6 @@ function RegistryClient(config, logger) {
         this._config.cache = this._config.storage ? this._config.storage.registry : null;
     }
 
-    // Override environment defaults if proxy config options are set
-    // This will make requests follow the proxies in this._config
-    if (Object.prototype.hasOwnProperty.call(this._config, 'no_proxy')) {
-        process.env.no_proxy = this._config.no_proxy;
-    }
-    if (Object.prototype.hasOwnProperty.call(this._config, 'proxy')) {
-        process.env.http_proxy = this._config.proxy;
-    }
-    if (Object.prototype.hasOwnProperty.call(this._config, 'httpsProxy')) {
-        process.env.https_proxy = this._config.httpsProxy;
-    }
-
     // Init the cache
     this._initCache();
 }
