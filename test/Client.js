@@ -53,6 +53,10 @@ describe('RegistryClient', function () {
             it('should set default strictSsl config', function () {
                 expect(this.registry._config.strictSsl).to.be(false);
             });
+
+            it('should have no_proxy config', function () {
+                expect(this.registry._config).to.have.property('no_proxy');
+            });
         });
 
         it('should have a lookup prototype method', function () {

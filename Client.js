@@ -12,6 +12,11 @@ function RegistryClient(config, logger) {
         this._config.cache = this._config.storage ? this._config.storage.registry : null;
     }
 
+    // In case config doesn't have no_proxy
+    if (!Object.prototype.hasOwnProperty.call(this._config, 'no_proxy')) {
+        this._config.no_proxy = process.env.no_proxy;
+    }
+
     // Init the cache
     this._initCache();
 }
