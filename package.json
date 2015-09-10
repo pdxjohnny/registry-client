@@ -23,7 +23,7 @@
     "request": "~2.51.0",
     "request-replay": "~0.2.0",
     "rimraf": "~2.2.0",
-    "should-proxy": "^1.0.1"
+    "should-proxy": "1.0.4"
   },
   "devDependencies": {
     "expect.js": "~0.2.0",
