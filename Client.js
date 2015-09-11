@@ -2,7 +2,6 @@ var async = require('async');
 var Config = require('bower-config');
 var methods = require('./lib');
 var Cache = require('./lib/util/Cache');
-var proxy = require('./lib/util/proxy');
 
 function RegistryClient(config, logger) {
     this._logger = logger;
@@ -12,10 +11,6 @@ function RegistryClient(config, logger) {
     if (!Object.prototype.hasOwnProperty.call(this._config, 'cache')) {
         this._config.cache = this._config.storage ? this._config.storage.registry : null;
     }
-
-    // Set proxy environment variables to what this._config says
-    proxy.set(this._config);
-
     // Init the cache
     this._initCache();
 }
